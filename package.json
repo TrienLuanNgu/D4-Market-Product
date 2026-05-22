@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:gh-pages": "ng build --configuration production --base-href /D4-Market-Product/",
     "preview": "node serve-static.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
