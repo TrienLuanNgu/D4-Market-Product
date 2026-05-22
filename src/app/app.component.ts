@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  readonly heroBackground = [
+    'linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.52) 48%, rgba(0, 0, 0, 0.22))',
+    'linear-gradient(0deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.02) 42%)',
+    "url('assets/final-assembled-slider.jpg')",
+  ].join(', ');
+
   readonly metrics = [
     { value: '337mm', label: 'usable rail travel' },
     { value: '50ms', label: 'BLE zoom update window' },
@@ -38,28 +44,28 @@ export class AppComponent {
       stage: 'Retired attempt',
       title: 'Servo drive was too unstable.',
       copy: 'The first SG90 pulley coupling introduced wobble and inconsistent belt tension, so it was replaced.',
-      image: '/assets/servo-attempt.jpg',
+      image: 'assets/servo-attempt.jpg',
       alt: 'Initial servo-driven carriage attempt with a small pulley attached.',
     },
     {
       stage: 'Retired attempt',
       title: 'Physical stylus zoom was too fragile.',
       copy: 'Dragging the phone zoom slider required exact alignment, so the design moved to software-controlled zoom.',
-      image: '/assets/stylus-zoom-attempt.jpg',
+      image: 'assets/stylus-zoom-attempt.jpg',
       alt: 'Initial mechanical zoom mechanism with a servo and stylus near a phone screen.',
     },
     {
       stage: 'Final drive',
       title: 'Stepper motion made the shot repeatable.',
       copy: 'A 28BYJ-48 stepper and ULN2003 driver provide precise carriage positioning over the rail.',
-      image: '/assets/stepper-drive.jpg',
+      image: 'assets/stepper-drive.jpg',
       alt: 'Replacement 28BYJ-48 stepper motor with ULN2003 driver components.',
     },
     {
       stage: 'Integration',
       title: 'Firmware and app were tuned together.',
       copy: 'ESP32 pulse timing, BLE notifications, and zoom math were calibrated as a connected system.',
-      image: '/assets/calibration-breadboard.jpg',
+      image: 'assets/calibration-breadboard.jpg',
       alt: 'ESP32 development board and motor driver setup during calibration.',
     },
   ];

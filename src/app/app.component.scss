@@ -129,10 +129,10 @@ nav a:focus-visible {
   align-items: end;
   padding: 96px 36px 70px;
   color: #ffffff;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.52) 48%, rgba(0, 0, 0, 0.22)),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.02) 42%),
-    url('/assets/final-assembled-slider.jpg') center 54% / cover no-repeat;
+  background-color: #111111;
+  background-position: center 54%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
