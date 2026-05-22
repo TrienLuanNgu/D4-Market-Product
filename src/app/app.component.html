@@ -1,0 +1,196 @@
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="DollySync home">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span>DollySync</span>
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="#proof">Proof</a>
+    <a href="#brand-system">Brand</a>
+    <a href="#expo">Expo</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <p class="eyebrow">FIT3146 D4 Novel Solution</p>
+      <h1 id="hero-title">DollySync Slider</h1>
+      <p class="hero-copy">
+        A smartphone-first motorised camera slider that makes the Hitchcock dolly-zoom effect practical for student filmmakers, creators, and live demos.
+      </p>
+
+      <div class="hero-actions" aria-label="Page shortcuts">
+        <a class="button primary" href="#expo">Expo strategy</a>
+        <a class="button secondary" href="#proof">See the build</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics" aria-label="Key product facts">
+    @for (metric of metrics; track metric.label) {
+      <article>
+        <strong>{{ metric.value }}</strong>
+        <span>{{ metric.label }}</span>
+      </article>
+    }
+  </section>
+
+  <section class="section use-case" aria-labelledby="use-case-title">
+    <div class="section-intro">
+      <p class="eyebrow">Use case</p>
+      <h2 id="use-case-title">Cinematic camera motion without professional cinema gear.</h2>
+    </div>
+
+    <div class="split">
+      <div>
+        <p>
+          DollySync is built for creators who want a polished dolly-zoom shot using an iPhone, a compact rail, and simple physical controls. The operator taps the subject in the companion app, presses a hardware button, and the slider synchronises physical travel with live camera zoom.
+        </p>
+        <p>
+          The expo pitch focuses on a clear before-and-after message: the effect usually needs coordinated camera movement and lens control, while this artefact turns that coordination into a repeatable one-person workflow.
+        </p>
+      </div>
+
+      <div class="workflow" aria-label="DollySync workflow">
+        @for (step of workflow; track step.title) {
+          <article>
+            <span>{{ step.number }}</span>
+            <div>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.copy }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section proof" id="proof" aria-labelledby="proof-title">
+    <div class="section-intro">
+      <p class="eyebrow">Build proof</p>
+      <h2 id="proof-title">A real artefact with a visible design evolution.</h2>
+      <p>
+        The marketing story shows the final prototype and the engineering decisions that made it reliable enough for an expo demonstration.
+      </p>
+    </div>
+
+    <div class="feature-photo">
+      <img src="/assets/final-assembled-slider.jpg" alt="Final assembled DollySync camera slider with an iPhone mounted on the carriage.">
+      <div>
+        <p class="eyebrow">Final assembly</p>
+        <h3>ESP32 rail motion plus BLE zoom control.</h3>
+        <p>
+          The completed build uses twin steel rails, a phone carriage, ESP32 firmware, BLE updates, and an iOS app that adjusts video zoom in real time.
+        </p>
+      </div>
+    </div>
+
+    <div class="evidence-grid">
+      @for (item of evidence; track item.title) {
+        <article class="evidence-card">
+          <img [src]="item.image" [alt]="item.alt">
+          <div>
+            <p class="eyebrow">{{ item.stage }}</p>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.copy }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section brand-system" id="brand-system" aria-labelledby="brand-title">
+    <div class="section-intro">
+      <p class="eyebrow">Brand system</p>
+      <h2 id="brand-title">A technical brand with a clear cinematic payoff.</h2>
+      <p>
+        The identity uses precise rail geometry, a strong action name, and film-production language so visitors understand both the mechanism and the creative result.
+      </p>
+    </div>
+
+    <div class="brand-grid">
+      <article class="logo-panel">
+        <div class="logo-lockup" aria-label="DollySync brand lockup">
+          <span class="brand-mark large" aria-hidden="true"></span>
+          <span>DollySync</span>
+        </div>
+        <p>
+          The mark combines a camera frame with a travelling rail line. It stays simple enough for a poster corner, phone screen, sticker, or QR handout.
+        </p>
+      </article>
+
+      <article>
+        <h3>Positioning</h3>
+        <p>
+          "Tap. Slide. Zoom." explains the value in one line: subject calibration, physical motion, and synchronised zoom.
+        </p>
+      </article>
+
+      <article>
+        <h3>Material design</h3>
+        <p>
+          The expo materials use matte charcoal, clean white space, action red, and signal teal to feel like camera hardware rather than a classroom poster.
+        </p>
+      </article>
+
+      <article>
+        <h3>Justification</h3>
+        <p>
+          The strategy leads with the finished shot, then uses the exposed hardware to prove novelty: software zoom replaced the fragile stylus approach, and stepper travel replaced unstable servo motion.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section technical" aria-labelledby="technical-title">
+    <div class="section-intro">
+      <p class="eyebrow">What is inside</p>
+      <h2 id="technical-title">The hardware and software message visitors should remember.</h2>
+    </div>
+
+    <div class="technical-grid">
+      @for (item of technical; track item.title) {
+        <article>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.copy }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="section expo" id="expo" aria-labelledby="expo-title">
+    <div class="section-intro">
+      <p class="eyebrow">Expo strategy</p>
+      <h2 id="expo-title">A simple booth flow built for quick approval and fast visitor understanding.</h2>
+    </div>
+
+    <div class="expo-layout">
+      <article class="poster-plan">
+        <h3>Planned materials</h3>
+        <ul>
+          @for (material of materials; track material) {
+            <li>{{ material }}</li>
+          }
+        </ul>
+      </article>
+
+      <div class="timeline" aria-label="Expo visitor journey">
+        @for (moment of expoMoments; track moment.title) {
+          <article>
+            <span>{{ moment.time }}</span>
+            <div>
+              <h3>{{ moment.title }}</h3>
+              <p>{{ moment.copy }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>DollySync Slider - FIT3146 D4 Novel Solution marketing site.</p>
+  <a href="#top">Back to top</a>
+</footer>
