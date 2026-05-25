@@ -40,5 +40,5 @@ createServer((request, response) => {
   response.writeHead(200, { 'Content-Type': type });
   createReadStream(filePath).pipe(response);
 }).listen(port, host, () => {
-  console.log(`DollySync preview: http://${host}:${port}/`);
+  console.log(`FrameGlide preview: http://${host}:${port}/`);
 });
